@@ -1,0 +1,7 @@
+/target/
+/firmware/target/
+/firmware/.embuild/
+/firmware/backups/
+.env
+__pycache__/
+.DS_Store

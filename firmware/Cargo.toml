@@ -1,0 +1,26 @@
+[package]
+name = "eink-japanese-rust"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+[dependencies]
+japanese-core = { path = ".." }
+anyhow = "1.0"
+serde_json = "1.0"
+embedded-svc = "0.29.0"
+embedded-hal = "1.0"
+esp-idf-hal = "0.47.0"
+esp-idf-svc = "0.53.0"
+esp-idf-sys = { version = "0.38.1", features = ["binstart"] }
+log = "0.4"
+
+[build-dependencies]
+embuild = "0.33"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+debug = 1
+panic = "abort"
